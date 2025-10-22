@@ -8,5 +8,3 @@ updates:
     rebase-strategy: "auto"
     commit-message:
       prefix: "fix(dependancies)"
-    labels:
-      - "dependencies"

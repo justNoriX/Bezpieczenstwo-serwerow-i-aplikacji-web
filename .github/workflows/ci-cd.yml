@@ -32,6 +32,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Create .env file
+        run: |
+          cd MaceWindu
+          echo "cert.pem=${{secrets.PEM_CERT}}" >> .env
+          echo "key.pem=${{secrets.PEM_KEY}}" >> .env
+          echo "localhost1.crt=${{secrets.CRT_LOCALHOST}}" >> .env
+          echo "DB_PASSWORD=${{secrets.KEY_LOCALHOST}}" >> .env
 #============pip-audit (SCA)================
   sca-scan:
     name: pip-audit (SCA)

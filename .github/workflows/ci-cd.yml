@@ -34,7 +34,6 @@ jobs:
 
       - name: Create .env file
         run: |
-          cd MaceWindu
           echo "cert.pem=${{secrets.PEM_CERT}}" >> .env
           echo "key.pem=${{secrets.PEM_KEY}}" >> .env
           echo "localhost1.crt=${{secrets.CRT_LOCALHOST}}" >> .env
